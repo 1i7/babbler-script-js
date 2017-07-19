@@ -1,0 +1,44 @@
+{
+  "name": "babbler-script-js",
+  "version": "0.0.1",
+  "description": "Simple remote scripting engine above babbler-js library",
+  "main": "lib/babbler-script.js",
+  "files": [
+    "lib/babbler-script.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "babbler-js": "^0.6.1",
+    "inherits": "^2.0.3",
+    "node-event-emitter": "0.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "nodeunit": "^0.10.2"
+  },
+  "scripts": {
+    "build": ". scripts/build.sh",
+    "prepublish": "npm run build",
+    "test": "node test/babbler-script-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1i7/babbler-script-js.git"
+  },
+  "keywords": [
+    "babler",
+    "arduino",
+    "chipkit",
+    "robot",
+    "cnc"
+  ],
+  "author": "Anton Moiseev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1i7/babbler-script-js/issues"
+  },
+  "homepage": "https://github.com/1i7/babbler-script-js#readme"
+}
+
