@@ -3,7 +3,7 @@ Simple remote scripting engine above babbler-js https://github.com/1i7/babbler-j
 
 ~~~js
     var Babbler = require('babbler-js');
-    var BabblerScript = require('babbler-script');
+    var BabblerScript = require('babbler-script-js');
     
     var babbler = new Babbler();
     babbler.stickProp('status', 'status', [], 500);
