@@ -406,6 +406,27 @@ function BabblerScript(babbler, options) {
 // генерировать события красиво
 inherits(BabblerScript, EventEmitter);
 
+// Вспомогательные статические вызовы
+
+/**
+ * Преобразовать текст со скриптом в последовательность команд: 
+ * одна строка - одна команда, строка разбивается по пробелам,
+ * первый элемент строки - имя команды, остальные - параметры.
+ */
+BabblerScript.parseStr = function(progStr) {
+    // программа - массив команд вида:
+    // {cmd: 'cmd', params: [params]}
+    var prog = [];
+    // разобрать скрипт на строки
+    var lines = progStr.split('\n');
+    for(var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+        // разбить строку на куски по пробелам
+        var tokens = line.split(' ');
+        prog.push({cmd: tokens[0], params: tokens.slice(1)});
+    }
+    return {program: prog};
+}
 
 // Перечисления и константы для публики
 
